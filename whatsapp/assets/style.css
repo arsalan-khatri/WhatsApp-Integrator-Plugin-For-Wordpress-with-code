@@ -1,0 +1,74 @@
+/* wrapper */
+.ak_deep_knowledge-float-wrapper {
+  position: fixed;
+  z-index: 10;
+  pointer-events: none; /* allow only link to be clickable */
+}
+
+/* floating button */
+.ak_deep_knowledge-floating-btn {
+  pointer-events: auto;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  overflow: visible;
+  transition: transform 0.18s ease;
+}
+
+/* icon image inside button */
+.ak_deep_knowledge-icon {
+  width: 60%;
+  height: auto;
+  display: block;
+  transition: transform 0.18s ease;
+}
+
+/* typing hover text box */
+.ak_deep_knowledge-hover-text {
+  position: absolute;
+  right: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  pointer-events: none;
+  transition: opacity 0.12s ease, transform 0.18s ease;
+}
+
+/* show state (JS adds class while typing) */
+.ak_deep_knowledge-hover-text.ak_deep_knowledge-show {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-6px);
+}
+
+/* icon scale on hover */
+.ak_deep_knowledge-floating-btn:hover .ak_deep_knowledge-icon { transform: scale(1.08); }
+.ak_deep_knowledge-floating-btn:focus .ak_deep_knowledge-icon { transform: scale(1.08); }
+
+/* Shortcode / product button */
+.ak_deep_knowledge-whatsapp-btn {
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity .18s ease, transform .08s ease;
+}
+/*.ak_deep_knowledge-whatsapp-btn:hover {opacity: .95; }*/
+.ak_deep_knowledge-btn-icon { width: 18px; height: 18px; display:inline-block; }
+
+/* responsive tweak */
+@media (max-width: 480px) {
+  .ak_deep_knowledge-hover-text { display: none; } /* hide on very small screens */
+}
