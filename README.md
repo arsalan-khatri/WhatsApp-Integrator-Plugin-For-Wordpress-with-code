@@ -29,14 +29,6 @@ Easily get WooCommerce orders via WhatsApp! Add a button using `[ak_whatsapp_but
 
 You can place a custom WhatsApp button anywhere using the `[ak_whatsapp_button]` shortcode.
 
-**Basic Usage:**
-
-[ak_whatsapp_button] shortcode
-
-[ak_whatsapp_button text="Buy on WhatsApp" bg="#000000" color="#ffffff"]
-
-**Advanced Usage:**
-
 ## Technical Details
 
 * **Hooks Used:** `woocommerce_single_product_summary`, `wp_footer`, `admin_menu`.
